@@ -23,8 +23,11 @@ ADD ./solrconfig.xml \
 # Create core.properties
 RUN echo name=$SOLR_CORE > /opt/solr/server/solr/$SOLR_CORE/core.properties 
 
+# Add spatial support
+ADD https://repo1.maven.org/maven2/com/vividsolutions/jts-core/1.14.0/jts-core-1.14.0.jar /opt/solr/server/solr-webapp/webapp/WEB-INF/lib/
+
 # Giving ownership to Solr
-RUN chown -R $SOLR_USER:$SOLR_USER /opt/solr/server/solr/$SOLR_CORE
+RUN chown -R $SOLR_USER:$SOLR_USER /opt/solr/server/
 
 # User
 USER $SOLR_USER:$SOLR_USER
