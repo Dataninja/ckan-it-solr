@@ -11,7 +11,7 @@ The tools referenced in this repository are
 
 ## Project components
 
-* **Solr** version 6.2, packaged for CKAN and with some customizations. What's inside this repository.
+* **Solr** version 6.6, packaged for CKAN and with some customizations. What's inside this repository.
 
 ## How to build this version of Solr and test it as part of CKAN
 

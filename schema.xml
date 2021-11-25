@@ -93,6 +93,8 @@ schema. In this case the version should be set to the next CKAN version number.
     <field name="id" type="string" indexed="true" stored="true" required="true" />
     <field name="site_id" type="string" indexed="true" stored="true" required="true" />
     <field name="title" type="text" indexed="true" stored="true" />
+    <field name="identifier" type="text" indexed="true" stored="true" />
+    <field name="publisher_name" type="text" indexed="true" stored="true" />
     <field name="entity_type" type="string" indexed="true" stored="true" omitNorms="true" />
     <field name="dataset_type" type="string" indexed="true" stored="true" />
     <field name="state" type="string" indexed="true" stored="true" omitNorms="true" />
@@ -114,6 +116,7 @@ schema. In this case the version should be set to the next CKAN version number.
     <field name="tags" type="string" indexed="true" stored="true" multiValued="true"/>
     <field name="groups" type="string" indexed="true" stored="true" multiValued="true"/>
     <field name="organization" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="creator" type="text" indexed="true" stored="true" multiValued="true"/>
 
     <field name="capacity" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="permission_labels" type="string" indexed="true" stored="false" multiValued="true"/>
@@ -210,6 +213,9 @@ schema. In this case the version should be set to the next CKAN version number.
 <copyField source="res_description" dest="text"/>
 <copyField source="maintainer" dest="text"/>
 <copyField source="author" dest="text"/>
+<copyField source="creator" dest="text"/>
+<copyField source="identifier" dest="text"/>
+<copyField source="publisher_name" dest="text"/>
 
 <copyField source="package_multilang_localized_*" dest="text"/>
 
