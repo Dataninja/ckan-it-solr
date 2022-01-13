@@ -178,6 +178,7 @@ schema. In this case the version should be set to the next CKAN version number.
     <dynamicField name="*_date" type="date" indexed="true" stored="true" multiValued="false"/>
 
     <dynamicField name="extras_*" type="text" indexed="true" stored="true" multiValued="false"/>
+    <dynamicField name="extras_date_*" type="string" indexed="true" stored="true" multiValued="false"/>
     <dynamicField name="res_extras_*" type="text" indexed="true" stored="true" multiValued="true"/>
     <dynamicField name="vocab_*" type="string" indexed="true" stored="true" multiValued="true"/>
     <dynamicField name="*" type="string" indexed="true"  stored="false"/>
@@ -198,6 +199,7 @@ schema. In this case the version should be set to the next CKAN version number.
 <copyField source="download_url" dest="urls"/>
 <copyField source="res_url" dest="urls"/>
 <copyField source="extras_*" dest="text"/>
+<copyField source="extras_date_*" dest="string"/>
 <copyField source="res_extras_*" dest="text"/>
 <copyField source="vocab_*" dest="text"/>
 <copyField source="urls" dest="text"/>
